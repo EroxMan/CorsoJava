@@ -29,8 +29,8 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="button"  <a href="http://127.0.0.1:8080/WebAppTemplate/versamento"> <button class="btn">VERSAMENTO</button></a><style>
-</style> </a>
+          <a class="button">  <a href="http://127.0.0.1:8080/WebAppTemplate/versamento"> <button class="btn">VERSAMENTO</button></a><style>
+</style> 
         </li>
               <div class="button">
                 <a href="http://127.0.0.1:8080/WebAppTemplate/prelievo"> <button class="btn">PRELIEVO</button></a><style>

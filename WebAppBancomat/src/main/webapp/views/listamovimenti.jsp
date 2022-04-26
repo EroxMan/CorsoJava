@@ -28,7 +28,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="button"  <a href="http://127.0.0.1:8080/WebAppTemplate/versamento"> <button class="btn">VERSAMENTO</button></a><style>
-</style> </a>
+</style> 
         </li>
               <div class="button">
                 <a href="http://127.0.0.1:8080/WebAppTemplate/prelievo"> <button class="btn">PRELIEVO</button></a><style>

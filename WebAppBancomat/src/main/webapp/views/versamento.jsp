@@ -28,15 +28,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="button" <a href="http://127.0.0.1:8080/WebAppTemplate/versamento"> <button class="btn">VERSAMENTO</button></a><style>
+          <a class="button" <a href="http://127.0.0.1:8080/WebAppTemplate/vers"> <button class="btn">VERSAMENTO</button></a><style>
 </style>
         </li>
               <div class="button">
-                <a href="http://127.0.0.1:8080/WebAppTemplate/prelievo"> <button class="btn">PRELIEVO</button></a><style>
+                <a href="http://127.0.0.1:8080/WebAppTemplate/prel"> <button class="btn">PRELIEVO</button></a><style>
 </style>    
             </div>
          <div class="button">
-                <a href="http://127.0.0.1:8080/WebAppTemplate/listamovimenti"> <button class="btn">LISTA MOVIMENTI</button></a><style>
+                <a href="http://127.0.0.1:8080/WebAppTemplate/list"> <button class="btn">LISTA MOVIMENTI</button></a><style>
 </style>
         </div>
       </ul>
@@ -87,7 +87,6 @@ slideCol.oninput = function() {
 </div>
 <pre>
 </pre>
-<!-- Invia Importo -->
 
 <button  type="submit" id="bth-search" onclick="showMessages()"  class="btn btn-primary btn-lg float-right">CONFERMA</button><br>
 

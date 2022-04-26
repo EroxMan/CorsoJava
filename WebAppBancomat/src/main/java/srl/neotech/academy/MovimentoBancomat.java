@@ -6,13 +6,13 @@ public class MovimentoBancomat {
 		private String id;
 		private String dataEora;
 		private TipologiaMovimenti operazione;
-		private String operation;
 		private Integer taglio;
 		private Integer quantita;
 		private Integer totale;
+		private Integer altroImporto;
 		private Integer conto;
 		private Integer saldo;
-	 	
+		
 		
 		public String getId() {
 			return id;
@@ -45,12 +45,7 @@ public class MovimentoBancomat {
 		public void setConto(Integer conto) {
 			this.conto = conto;
 		}
-		public String getOperation() {
-			return operation;
-		}
-		public void setOperation(String operation) {
-			this.operation = operation;
-		}
+
 		public TipologiaMovimenti getOperazione() {
 			return operazione;
 		}
@@ -81,14 +76,24 @@ public class MovimentoBancomat {
 		public void setTotale(Integer totale) {
 			this.totale = totale;
 		}
-		
-		
-		public boolean equals(MovimentoBancomat obj) {
-			if(obj == null) return false;
-			if(obj == this) return true;
-			if(!(obj instanceof MovimentoBancomat)) return false;
-			MovimentoBancomat o =(MovimentoBancomat) obj;
-			return o.id == this.id;
+		public Integer getAltroImporto() {
+			return altroImporto;
 		}
+		public void setAltroImporto(Integer altroImporto) {
+			this.altroImporto = altroImporto;
+		}
+		public void setNome(String nome) {
+			this.nome = nome;
+		}
+        public boolean equals(MovimentoBancomat obj) {
+    	if(obj == null) return false;
+	    if(obj == this) return true;
+     	if(!(obj instanceof MovimentoBancomat)) return false;
+    	MovimentoBancomat o =(MovimentoBancomat) obj;
+    	return o.id == this.id;
+	
+}
+		
+
 	}
 

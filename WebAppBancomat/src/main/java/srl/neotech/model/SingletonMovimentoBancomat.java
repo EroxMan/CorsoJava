@@ -9,6 +9,7 @@ import srl.neotech.academy.MovimentoBancomat;
 	public class SingletonMovimentoBancomat {
 
 		
+
 		private static SingletonMovimentoBancomat instance=null;
 		
 		ArrayList<MovimentoBancomat>listaMovimenti=new ArrayList<MovimentoBancomat>();
@@ -28,6 +29,5 @@ import srl.neotech.academy.MovimentoBancomat;
 			}
 			return instance;
 		}
-			
 	}
 
