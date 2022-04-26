@@ -3,6 +3,7 @@ package srl.neotech.controllers;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 import com.fasterxml.jackson.annotation.JsonView;
 import org.springframework.http.MediaType;
@@ -51,7 +52,7 @@ public class APIController {
 		
 		
 			SingletonMovimentoBancomat.getInstance().getListaMovimenti().removeIf(movimentazione->movimentazione.getId().equals(idMovimento));
-			response.getMovimentiSearchResponse(SingletonMovimentoBancomat.getInstance().getListaMovimenti());
+			response.getMovimentiSearchResponse();
 						
 		
 		

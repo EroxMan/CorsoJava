@@ -27,13 +27,13 @@ public class ViewController {
 		return "home";
 	}
 	
-	@RequestMapping(value="/vers", method = RequestMethod.GET)
+	@RequestMapping(value="/versamento", method = RequestMethod.GET)
 	public String vers() {
 		
 		return "versamento";
 	}
 	
-	@RequestMapping(value="/prel", method = RequestMethod.GET)
+	@RequestMapping(value="/prelievo", method = RequestMethod.GET)
 	public String prel() {
 		return "prelievo";
 	}
@@ -47,7 +47,7 @@ public class ViewController {
 		ListaMovimentiResponse response=new ListaMovimentiResponse();
 		response.setListaMovimentiRestituiti(SingletonMovimentoBancomat.getInstance().getListaMovimenti());
 		model.addAttribute("moveWay", response);
-		return "lista_movimenti";
+		return "listamovimenti";
 	}
 	
 	
@@ -71,7 +71,7 @@ public class ViewController {
 		
 		model.addAttribute("saldo", valoreSaldo);
 		model.addAttribute("moveWay", response);
-		return "lista_movimenti";
+		return "listamovimenti";
 	}
 
 }

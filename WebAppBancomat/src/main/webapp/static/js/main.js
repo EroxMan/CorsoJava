@@ -1,36 +1,99 @@
 $(document).ready(function () {
+//operazione versamento
+   $('#btn-versamento').click(function (event) {   
 
-    $("#search-form").submit(function (event) {
-        //stop submit the form, we will post it manually.
-        event.preventDefault();
-        fire_ajax_submit();
-    });
+    var requestData = {
+	    'movimentoRequest':{
+		  
+		  'operazione':"VERSAMENTO",
+		  'taglio':$( "#taglio option:selected" ).text(),
+		  'quantita':$('#rangeValore').val(),
+		  'nominativo':$('#txt-nominativo').val()
+	    }
+     };
+    
+
+    var response=fire_ajax_post("api/movimento_add", requestData);
+
+ });
+});
+
+function deleteAereo(itemId){
+
+var response=fire_ajax_pathvar("api/delete/"+itemId);
+var response_object=response.responseJSON;
+
+ var response_text=response.responseText;
+$('#text-feedback').text(response_text);
+    
+
+$("#listaMovId tr.mia").remove();
+
+$.each(response_object.movimentiSearchResponse, function(i, item) {
+    var riga="<tr class='mia'>";
+	     riga+="<td>"+item.id+"</td>";
+	     riga+="<td>"+item.dataEora+"</td>";
+	     riga+="<td>"+item.operazione+"</td>";
+         riga+="<td>"+item.nominativo+"</td>";
+	     riga+="<td>"+item.taglio+"</td>";
+	     riga+="<td>"+item.quantita+"</td>";
+         riga+="<td>"+item.taglio*item.quantita+"</td>";
+	     riga+="<td><button onClick='elimina-movimento(\""+item.id+"\")' type='button' class='btn btn-danger'>delete</button></td>";
+   riga+="</tr>";
+   $("#listaMovId").append(riga);
+    });	
+}
+
+
+
+
+//operazione prelievo
+$(document).ready(function () {
+	
+   $('#btn-prelievo').click(function (event) {   
+
+     var importo=0;
+    if($( "#importo option:selected").text()=="AltroImporto") importo=$("#altro_importo_num").val();
+    else importo=$( "#importo option:selected").text();
+    var requestData = {
+	    'movimentazione':{
+		  'quantita':1,
+          'altroImporto':importo,
+		  'operazione':"PRELIEVO",
+		  'taglio':$( "#importo option:selected").val(),
+		  'nominativo':$('#txt-nominativo1').val()
+	    }
+     };
+
+    var response=fire_ajax_post("api/movimento_add", requestData);
+
+ });
 
 });
 
+function deleteAereo(itemId){
 
-function fire_ajax_submit() {
+var response=fire_ajax_pathvar("api/delete/"+itemId);
+var response_object=response.responseJSON;
 
-    var search = {};
-    search["aereo"] = $("#aereo").val();
-    $.ajax({
-        type: "POST",
-        contentType: "application/json",
-        url: "/WebAppTemplate/api/search",
-        data: JSON.stringify(search),
-        dataType: 'json',
-        cache: false,
-        success: function (data) {
-            var json = JSON.stringify(data);
-            $('#feedback').html(json);
+ var response_text=response.responseText;
+$('#text-feedback').text(response_text);
+    
 
-            console.log("SUCCESS : ", data);
-            $("#btn-search").prop("disabled", false);
+$("#listaMovId tr.mia").remove();
 
-        },
-        error: function (e) {
-            var json = "<h4>Ajax Response</h4>&lt;pre&gt;"
-                + e.responseText + "&lt;/pre&gt;";
-        }
-   });
+
+$.each(response_object.movimentiSearchResponse, function(i, item) {
+    var riga="<tr class='mia'>";
+	     riga+="<td>"+item.id+"</td>";
+	     riga+="<td>"+item.dataEora+"</td>";
+	     riga+="<td>"+item.operazione+"</td>";
+         riga+="<td>"+item.nominativo+"</td>";
+	     riga+="<td>"+item.taglio+"</td>";
+         riga+="<td>"+item.altroImporto+"</td>";
+	     riga+="<td>"+item.taglio-item.saldo+"</td>";
+	     riga+="<td><button onClick='elimina-movimento(\""+item.id+"\")' type='button' class='btn btn-danger'>delete</button></td>";
+   riga+="</tr>";
+   $("#listaMovId").append(riga);
+    });	
 }
