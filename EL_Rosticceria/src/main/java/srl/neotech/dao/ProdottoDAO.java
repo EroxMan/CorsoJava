@@ -6,7 +6,7 @@ import srl.neotech.model.DatiRosticceria;
 import srl.neotech.model.Prodotto;
 
 @Component
-	public class prodottoDAO {
+	public class ProdottoDAO {
 		
 		public void addProdotto(Prodotto prodotto) {
 			
