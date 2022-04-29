@@ -18,7 +18,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="http://127.0.0.1:8080/WebAppTemplate/home"><button class="btn">HOME</button></a><style> 
+    <a class="navbar-brand" href="home"><button class="btn">HOME</button></a><style> 
 </style>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -28,15 +28,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="button"  href="http://127.0.0.1:8080/WebAppTemplate/versamento"> <button class="btn">VERSAMENTO</button></a><style>
+          <a class="button"  href="versamento"> <button class="btn">VERSAMENTO</button></a><style>
 </style> 
         </li>
               <div class="button">
-                <a href="http://127.0.0.1:8080/WebAppTemplate/prelievo"> <button class="btn">PRELIEVO</button></a><style>
+                <a href="prelievo"> <button class="btn">PRELIEVO</button></a><style>
 </style>    
             </div>
          <div class="button">
-                <a href="http://127.0.0.1:8080/WebAppTemplate/listamovimenti"> <button class="btn">LISTA MOVIMENTI</button></a><style>
+                <a href="listamovimenti"> <button class="btn">LISTA MOVIMENTI</button></a><style>
 </style>
         </div>
       </ul>

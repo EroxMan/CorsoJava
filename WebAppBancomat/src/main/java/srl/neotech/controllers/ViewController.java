@@ -22,7 +22,7 @@ public class ViewController {
 		return "provaAjaxBancomat";
 	}
 	
-	@RequestMapping(value="/", method = RequestMethod.GET)
+	@RequestMapping(value="home", method = RequestMethod.GET)
 	public String bank() {
 		return "home";
 	}
