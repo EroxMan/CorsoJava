@@ -7,6 +7,7 @@ public class Prodotto {
 	private String nome;
 	private Double prezzoUnitario;
 	private Integer minutiPreparazione;
+	
 	public String getId() {
 		return id;
 	}
