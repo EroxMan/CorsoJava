@@ -2,6 +2,8 @@ package srl.neotech.model;
 
 import java.util.ArrayList;
 
+//Singleton
+
 public class DatiRosticceria {
 	
 	private static DatiRosticceria instance;
@@ -37,4 +39,3 @@ public class DatiRosticceria {
 	}
 	
 }
-// Singleton
